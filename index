@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FairWay Manufacturing | Custom Wire Harnesses & Parts</title>
+  <meta name="description" content="FairWay Manufacturing builds custom wire harnesses and supplies hard-to-find electrical parts for specialty vehicles and industrial equipment. Made in USA." />
+  <meta name="theme-color" content="#0b5" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a0f12;
+      --card: #0f151a;
+      --ink: #e9f1f6;
+      --muted: #a9b8c6;
+      --brand: #12c48b;
+      --brand-2: #2aa5ff;
+      --ring: rgba(18,196,139,.35);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      color: var(--ink);
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(18,196,139,.2), transparent 60%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(42,165,255,.14), transparent 55%),
+                  var(--bg);
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+    header { position: sticky; top: 0; backdrop-filter: blur(10px);
+      background: linear-gradient(180deg, rgba(10,15,18,.85), rgba(10,15,18,.55));
+      border-bottom: 1px solid rgba(255,255,255,.06); z-index: 10; }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap: 16px; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.2px; }
+    .logo { width:34px; height:34px; border-radius:8px; background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      display:grid; place-items:center; font-weight:800; color:#02130d; }
+    .nav a.btn { padding:10px 14px; border:1px solid rgba(255,255,255,.08); border-radius:10px; }
+    .btn-primary { background: linear-gradient(135deg, var(--brand), #0aa17b); border: none; color:#03110d; font-weight:700; }
+
+    .hero { padding: 64px 0 28px; text-align:center; }
+    .hero h1 { font-size: clamp(28px, 4.2vw, 44px); line-height:1.1; margin:10px 0 12px; }
+    .tagline { color: var(--muted); font-size: clamp(14px, 2.2vw, 18px); }
+    .badges { display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:18px; }
+    .badge { border:1px solid rgba(255,255,255,.1); color: var(--muted); padding:8px 12px; border-radius:999px; font-size:13px; background: rgba(255,255,255,.02); }
+
+    section { padding: 36px 0; }
+    .grid { display:grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
+    .card { grid-column: span 12; background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
+      border: 1px solid rgba(255,255,255,.08); border-radius: 16px; padding: 18px; }
+    .card h3 { margin: 0 0 8px; font-size: 18px; }
+    .card p { margin: 0; color: var(--muted); }
+    @media (min-width: 820px) {
+      .span-6 { grid-column: span 6; }
+      .span-4 { grid-column: span 4; }
+    }
+
+    table { width:100%; border-collapse:collapse; overflow:hidden; border-radius: 14px; }
+    thead th { text-align:left; font-size:13px; font-weight:700; color:#bcd; background: rgba(255,255,255,.04); }
+    th, td { padding: 12px 14px; border-bottom: 1px solid rgba(255,255,255,.06); }
+    tbody tr:hover { background: rgba(18,196,139,.06); }
+
+    .form { display:grid; gap:12px; }
+    input, textarea, select { width:100%; padding:12px 12px; border-radius:12px; background:#0c1216;
+      border:1px solid rgba(255,255,255,.12); color: var(--ink); }
+    input:focus, textarea:focus, select:focus { outline: 2px solid var(--ring); border-color: var(--brand); }
+    textarea { min-height: 120px; }
+    .hint { color: var(--muted); font-size:12px; }
+
+    footer { border-top:1px solid rgba(255,255,255,.08); color:var(--muted); }
+    .cols { display:grid; gap:18px; grid-template-columns: repeat(12, 1fr); }
+    .col { grid-column: span 12; }
+    @media (min-width: 820px) { .col-4{ grid-column: span 4; } .col-6{ grid-column: span 6; } }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "FairWay Manufacturing",
+    "url": "https://example.com",
+    "logo": "https://example.com/logo.png",
+    "description": "Custom wire harness manufacturing and electrical parts supplier for specialty vehicles and industrial equipment.",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "email": "sales@fairwaymfg.com"
+    }]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <div class="logo">FW</div>
+        <span>FairWay Manufacturing</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a class="btn" href="#capabilities">Capabilities</a>
+        <a class="btn" href="#catalog">Parts</a>
+        <a class="btn" href="#industries">Industries</a>
+        <a class="btn btn-primary" href="#rfq">Request a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="container">
+    <section class="hero">
+      <div class="badge" style="display:inline-block;">Made in USA • Built to Spec</div>
+      <h1>Custom Wire Harnesses & Hard-to-Find Electrical Parts</h1>
+      <p class="tagline">We build production-quality harnesses for specialty vehicles and industrial equipment, and supply the connectors, terminals, and loom you need to keep fleets running.</p>
+      <div class="badges">
+        <div class="badge">Low-volume & Production Runs</div>
+        <div class="badge">Reverse-Engineering & Rebuilds</div>
+        <div class="badge">Rapid Turnaround</div>
+        <div class="badge">Tested & Labeled</div>
+      </div>
+    </section>
+
+    <section id="capabilities">
+      <div class="grid">
+        <article class="card span-6">
+          <h3>Harness Manufacturing</h3>
+          <p>Custom lengths and breakouts, multi-branch looms, braided or corrugated loom, heat-shrink, labeling, continuity testing, and quality inspection. We build from drawings or samples.</p>
+        </article>
+        <article class="card span-6">
+          <h3>Connector & Terminal Supply</h3>
+          <p>Deutsch, Weather-Pack, Metri-Pack, Sumitomo, TE Connectivity, ring terminals, heat-shrink terminals, fuses, relays, and mounting hardware. Kitting available.</p>
+        </article>
+        <article class="card span-6">
+          <h3>Reverse Engineering</h3>
+          <p>Recreate discontinued harnesses from worn samples. We document pinouts, wire gauges, color codes, and create drawings for repeatability.</p>
+        </article>
+        <article class="card span-6">
+          <h3>Small to Mid-Volume</h3>
+          <p>From one-off prototypes to recurring batches. Flexible scheduling and clear lead times.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="industries">
+      <h2 style="font-size:24px; margin:0 0 12px;">Industries Served</h2>
+      <div class="grid">
+        <div class="card span-4"><h3>Street Sweepers</h3><p>Complete chassis harnesses, sensor leads, control panel looms.</p></div>
+        <div class="card span-4"><h3>Utility & Fleet</h3><p>Lighting harnesses, PTO controls, plow and salt spreader systems.</p></div>
+        <div class="card span-4"><h3>Off-Road & Agriculture</h3><p>Weather-sealed connections for harsh environments.</p></div>
+      </div>
+    </section>
+
+    <section id="catalog">
+      <h2 style="font-size:24px; margin:0 0 8px;">Popular Parts</h2>
+      <p class="hint" style="margin:0 0 12px;">Replace these placeholders with your best-selling SKUs.</p>
+      <div class="card">
+        <div style="overflow-x:auto;">
+          <table aria-describedby="catalog-note">
+            <thead>
+              <tr>
+                <th>SKU</th>
+                <th>Part</th>
+                <th>Spec</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>DT-2P-KIT</td><td>Deutsch 2-pin Connector Kit</td><td>AWG 14–18, Nickel pins</td><td>Weather-sealed, includes wedgelock</td></tr>
+              <tr><td>WP-6P-ASSY</td><td>Weather-Pack 6-pin Assembly</td><td>AWG 16, male and female</td><td>Fully terminated</td></tr>
+              <tr><td>FUSE-ATO-10</td><td>ATO Fuse</td><td>10 A</td><td>Bulk 25-pack</td></tr>
+              <tr><td>LOOM-SPLIT-1/2</td><td>Split Loom</td><td>0.5 in</td><td>Black, 50 ft</td></tr>
+              <tr><td>RING-HS-6MM</td><td>Heat-shrink Ring Terminal</td><td>6 mm, Red</td><td>Adhesive lined</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p id="catalog-note" class="hint" style="margin-top:10px;">Need something specific or discontinued? Send a photo or drawing and we will source or build it.</p>
+      </div>
+    </section>
+
+    <section id="rfq">
+      <h2 style="font-size:24px; margin:0 0 12px;">Request a Quote</h2>
+      <div class="grid">
+        <form class="card span-6 form" action="mailto:sales@fairwaymfg.com" method="post" enctype="text/plain">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" required />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+          <div>
+            <label for="qty">Quantity</label>
+            <input id="qty" name="quantity" type="number" min="1" step="1" />
+          </div>
+          <div>
+            <label for="details">Project details</label>
+            <textarea id="details" name="details" placeholder="Harness type, connectors, lengths, wire gauge, drawing or sample available…"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send RFQ</button>
+          <p class="hint">The RFQ button opens your email client. Prefer direct email? Write to <a href="mailto:sales@fairwaymfg.com">sales@fairwaymfg.com</a>.</p>
+        </form>
+        <aside class="card span-6">
+          <h3>Contact</h3>
+          <p>FairWay Manufacturing<br />
+             Arab, Alabama<br />
+             <a href="tel:+15555550123">(555) 555-0123</a><br />
+             <a href="mailto:sales@fairwaymfg.com">sales@fairwaymfg.com</a></p>
+          <h3 style="margin-top:14px;">Business Hours</h3>
+          <p>Mon–Fri 8:00–5:00 CT</p>
+          <h3 style="margin-top:14px;">Why Choose Us</h3>
+          <ul>
+            <li>Tight, repeatable quality</li>
+            <li>Weather-sealed connections</li>
+            <li>Fast sourcing of hard-to-find parts</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container cols" style="padding:22px 24px;">
+      <div class="col col-6">© <span id="y"></span> FairWay Manufacturing • All rights reserved.</div>
+      <div class="col col-6" style="text-align:right;">Made in Alabama • <a href="#rfq">Get a Quote</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
